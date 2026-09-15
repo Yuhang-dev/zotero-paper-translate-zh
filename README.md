@@ -37,7 +37,7 @@ https://github.com/Yuhang-dev/zotero-paper-translate-zh/tree/main/skills/zotero-
 
 ## 使用
 
-1. 环境检查：`python scripts/check_environment.py`
+1. 在仓库根目录运行环境检查：`python skills/zotero-paper-translate-zh/scripts/check_environment.py`
 2. 按 `SKILL.md` 的工作流执行：定位 PDF → 提取正文 → 分段翻译 → 组装 md → 交付 →（可选）挂回 Zotero。
 
 ## 仓库结构
