@@ -1,0 +1,16 @@
+# Codex UI 配置（可选，非必需）
+# 提供 Codex UI 中显示的技能名称与默认提示词。
+# 需要 Zotero 接入时，另按目标环境的 MCP 配置注入 Zotero 连接器。
+
+name: Zotero Paper Translate（中文）
+description: 将学术 PDF（尤其是 Zotero 附件）翻译为中文 Markdown，并为每篇生成约 500 字结构化摘要；仅在用户明确要求时把结果挂回 Zotero。
+instructions: |
+  当用户要求翻译或总结 Zotero 中的论文时，按 SKILL.md 的工作流执行：
+
+  1. 先运行 `python scripts/check_environment.py` 检查环境（Python、PyMuPDF、Zotero 运行状态与可用连接）。
+  2. 用可用的 Zotero 连接器定位 PDF 附件：先获取文库确认 libraryID（不要假设为 1），展开嵌套分类，判断哪些文献带 PDF 附件（详见 references/zotero-access.md）。
+  3. 用 `python scripts/extract_pdf_body.py "<pdf路径>" --out "<输出txt路径>"` 提取正文（自动剔除参考文献）。
+  4. 分块读取、分块翻译，保留专有名词与引用编号，公式用标准 LaTeX（格式见 references/output-format.md）。
+  5. 按模板组装 Markdown（总结在前、约 500 字、用 --- 分隔）。
+  6. 将 md 保存到用户可访问的输出目录并告知路径。
+  7. 仅在用户明确要求时，把 md 作为附件挂回 Zotero 条目（见 references/attachment.md；不提供永久删除操作）。

@@ -1,0 +1,18 @@
+# 论文与私有文档
+*.pdf
+
+# Zotero 数据库与附件存储（避免上传私人文库）
+zotero.sqlite
+zotero.sqlite.*
+storage/
+
+# 翻译产物与中间文件
+*_zh.md
+*_body.txt
+attach_log.txt
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
