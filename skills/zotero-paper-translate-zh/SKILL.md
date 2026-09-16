@@ -70,7 +70,7 @@ python scripts/extract_pdf_body.py "<PDF 绝对路径>" --out "<输出 txt 路�
 
 ## 文章总结
 
-<约 500 字中文总结：研究问题 → 方法/创新 → 关键结果 → 结论/意义>
+<约 500 字中文总结:研究问题、核心方法/体系、主要发现或实验结果、结论与意义,分点但不冗长>
 
 ---
 
@@ -88,7 +88,7 @@ python scripts/extract_pdf_body.py "<PDF 绝对路径>" --out "<输出 txt 路�
 
 ### Step 6 挂回 Zotero（可选）
 
-仅在用户**明确要求**"在 Zotero 里能看到 / 挂到条目下"时执行：
+用户不要求不挂附件都要执行：
 
 - 使用当前可用的 Zotero 连接能力注册附件（JS Bridge 插件优先）。
 - 父条目 key 是文献本身的 key，不是 PDF 附件的 key；libraryID 动态获取。
